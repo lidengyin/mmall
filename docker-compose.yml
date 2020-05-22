@@ -1,0 +1,96 @@
+version: '3'
+services:
+  micro-zuul:
+    image: 172.18.72.134:5000/micro-zuul:0.0.1-SNAPSHOT
+    restart: on-failure
+    ports:
+    - 8221:8221
+  micro-config-server:
+    image: 172.18.0.1:5000/config-server:0.0.1-SNAPSHOT
+    ports:
+    - 8200:8200
+    restart: on-failure
+  micro-admin:
+    image: 172.18.72.134:5000/micro-admin:0.0.1-SNAPSHOT
+    ports:
+    - 8220:8220
+    restart: on-failure
+  micro-log-server:
+    image: 172.18.0.1:5000/log-server:0.0.1-SNAPSHOT
+    ports:
+    - 8206:8206
+  micro-monitoring-server:
+    image: 172.18.0.1:5000/monitoring-server:0.0.1-SNAPSHOT
+    ports:
+    - 8202:8202
+    restart: on-failure
+  micro-micro-consumer:
+    image: 172.18.0.1:5000/micro-consumer:0.0.1-SNAPSHOT
+    ports:
+    - 8209:8209
+    restart: on-failure
+  micro-micro-consumer-1:
+    image: 172.18.0.1:5000/micro-consumer-1:0.0.1-SNAPSHOT
+    ports:
+      - 8213:8213
+    restart: on-failure
+  micro-uaa-server:
+    image: 172.18.0.1:5000/uaa-server:0.0.1-SNAPSHOT
+    ports:
+      - 8203:8203
+    restart: on-failure
+  micro-user-service:
+    image: 172.16.199.25:5000/user-service:0.0.1-SNAPSHOT
+    ports:
+    - 8201:8201
+    restart: on-failure
+  micro-upload-apk:
+    image: 172.18.0.1:5000/upload-apk:0.0.1-SNAPSHOT
+    ports:
+      - 8207:8207
+    restart: on-failure
+  micro-hcnet-website-1:
+    image: 172.18.0.1:5000/hcnet-website-12:0.0.1-SNAPSHOT
+    ports:
+    - 8211:8211
+    restart: on-failure
+  micro-uaa-server-2:
+    image: 172.18.0.1:5000/uaa-server-1:0.0.1-SNAPSHOT
+    ports:
+      - 8214:8214
+    restart: on-failure
+  micro-uaa:
+    image: 172.18.72.134:5000/micro-uaa:0.0.1-SNAPSHOT
+    ports:
+      - 8222:8222
+    restart: on-failure
+  micro-apk:
+    image: 172.18.72.134:5000/micro-apk:0.0.1-SNAPSHOT
+    ports:
+      - 8224:8224
+    restart: on-failure
+  micro-ueditor:
+    image: 172.18.72.134:5000/micro-ueditor:0.0.1-SNAPSHOT
+    ports:
+      - 8227:8227
+    restart: on-failure
+  micro-ueditor-consumer:
+    image: 172.18.72.134:5000/micro-ueditor-consumer:0.0.1-SNAPSHOT
+    ports:
+      - 8228:8228
+    restart: on-failure
+  micro-privilege:
+    image: 172.18.72.134:5000/micro-privilege:0.0.1-SNAPSHOT
+    ports:
+      - 8229:8229
+    restart: on-failure
+  micro-privilege-consumer:
+    image: 172.18.72.134:5000/micro-privilege-consumer:0.0.1-SNAPSHOT
+    ports:
+      - 8230:8230
+    restart: on-failure
+  mmall:
+    image: 172.18.72.134:5000/mmall-1:0.0.1-SNAPSHOT
+    ports:
+      - 8250:8250
+    restart: on-failure

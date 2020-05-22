@@ -1,0 +1,13 @@
+package cn.hcnet2006.mmall.mmall;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class MmallApplicationTests {
+
+    @Test
+    void contextLoads() {
+    }
+
+}
